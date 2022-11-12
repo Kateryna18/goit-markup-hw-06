@@ -237,6 +237,8 @@ a {
     transform: scale(0);
 }
 .modal {
+    position: relative;
+
     display: flex;
     justify-content: flex-end;
     padding-top: 8px;
@@ -255,9 +257,12 @@ a {
     border-radius: 4px;
 }
 .modal-button {
+    position: absolute;
+
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 2px;
 
     weight: 30px;
     height: 30px;
@@ -268,7 +273,151 @@ a {
     cursor: pointer;
 }
 
-.modal-button-icon {
+.modal-button-icon:hover {
+    fill: #2196F3;
+}
+
+.modal-form {
+    display: inline-block;
+    padding: 40px;
+    
+}
+
+.modal-form-text {
+    margin-bottom: 12px;
+
+    display: block;
+
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    color: #212121;
+}
+
+.modal-form-label {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.modal-form-label
+
+
+
+
+.modal-form-label-span {
+    padding-bottom: 4px;
+
+    text-align: left;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    
+    color: #757575;
+}
+
+.modal-form-label-input {
+    padding-left: 42px;
+    height: 40px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.modal-form-label-input:hover,
+.modal-form-label-input:focus {
+    border-color: #2196F3;
+}
+
+.modal-form-label-input:hover + .modal-form-label-icon {
+    fill: #2196F3;
+}
+.modal-form-label-input:focus+.modal-form-label-icon {
+    fill: #2196F3;
+}
+input:focus-visible {
+    outline: none;
+}
+
+
+.modal-form-label-icon {
+    position: absolute;
+    top: 32px;
+    left: 10px;
+}
+
+
+
+.modal-form-label-textarea {
+    padding: 8px;
+    font-family: inherit;
+    font-size: inherit;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    
+    resize: none;
+}
+
+.modal-form-label-textarea:hover,
+.modal-form-label-textarea:focus {
+    border: 1px solid #2196F3;
+}
+.modal-form-label-textarea:focus-visible {
+    outline: none;
+}
+
+.modal-form-label-textarea::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(14/12);
+    letter-spacing: 0.01em;
+    
+    color: rgba(117, 117, 117, 0.5);
+}
+.modal-label-condition {
+   margin-bottom: 30px;
+}
+
+.modal-form-label-checkbox {}
+
+.modal-label-condition-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(24/14);
+    letter-spacing: 0.03em;
+    
+    color: #757575;
+}
+
+.label-condition-link {}
+
+.modal-form-button {
+    min-width: 200px;
+    padding: 10px 52px;
+    margin-top: 30px;
+
+    display: inline-block;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(30/16);
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    color: #FFFFFF;
+    
+    background: #2196F3;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
 }
 
 /* Section */

@@ -272,7 +272,9 @@ a {
     border-radius: 50%;
     cursor: pointer;
 }
-
+.modal-button-icon {
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);;
+}
 .modal-button-icon:hover {
     fill: #2196F3;
 }
@@ -305,10 +307,6 @@ a {
     margin-bottom: 10px;
 }
 
-.modal-form-label
-
-
-
 
 .modal-form-label-span {
     padding-bottom: 4px;
@@ -329,6 +327,8 @@ a {
 
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-label-input:hover,
@@ -354,7 +354,6 @@ input:focus-visible {
 }
 
 
-
 .modal-form-label-textarea {
     padding: 8px;
     font-family: inherit;
@@ -364,6 +363,8 @@ input:focus-visible {
     border-radius: 4px;
     
     resize: none;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-label-textarea:hover,
@@ -383,10 +384,34 @@ input:focus-visible {
     color: rgba(117, 117, 117, 0.5);
 }
 .modal-label-condition {
-   margin-bottom: 30px;
+    margin-bottom: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
 }
 
-.modal-form-label-checkbox {}
+.modal-form-label-checkbox {
+    appearance: none;
+
+}
+
+.modal-label-condition-icon .unchecked {
+    opacity: 1;
+
+}
+.modal-form-label-checkbox:checked + .modal-label-condition-icon .unchecked {
+    opacity: 0;
+
+}
+
+.modal-label-condition-icon .checked {
+    opacity: 0;
+}
+.modal-form-label-checkbox:checked + .modal-label-condition-icon .checked {
+    opacity: 1;
+}
 
 .modal-label-condition-text {
     font-weight: 400;
@@ -397,7 +422,9 @@ input:focus-visible {
     color: #757575;
 }
 
-.label-condition-link {}
+.label-condition-link {
+    text-decoration: underline;
+}
 
 .modal-form-button {
     min-width: 200px;
@@ -809,10 +836,6 @@ footer {
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
 }
-
-.footer-form {}
-
-.footer-form-label {}
 
 .form-label-text {
     display: block;
